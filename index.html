@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="imsdian">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Enrollment Form</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js">
+    </script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="studentForm" method="POST" class="studentForm" action="#">
+        <h2>Student Enrollment Form</h2>
+        <div class="form-group ">
+            <label for="rollno" class="form-label">Roll No:</label>
+            <input type="text" class="form-control" name="rollno" id="rollno" required />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="FullName">Full Name:</label>
+            <input type="text" class="form-control" name="FullName" id="FullName" required />
+        </div>
+        <div class="form-group">
+            <label for="Class" class="form-label">Class:</label>
+            <input type="text" class="form-control" name="Class" id="Class" required>
+        </div>
+        <div class="form-group">
+            <label for="BirthDate" class="form-label">Date of Birth:</label>
+            <input type="text" id="BirthDate" name="BirthDate" class="form-control datepicker" placeholder=""
+                required />
+        </div>
+        <div class="form-group">
+            <label for="Address" class="form-label">Address:</label>
+            <input type="text" class="form-control" name="Address" id="Address" />
+        </div>
+        <div class="form-group">
+            <label for="EnrollmentDate" class="form-label">Enrollment Date</label>
+            <input type="text" id="EnrollmentDate" name="EnrollmentDate" class="form-control datepicker" placeholder=""
+                required />
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <input type="button" name="savebutton" id=" savebutton" class="btn btn-primary btn-lg" placeholder="submit"
+                value="submit" onclick="RegisterStudent();">
+            <input type="button" name="update" id="update" class="btn btn-success btn-lg" value="update"
+                onclick=UpdateStudent()>
+            <input type="button" name="reset" id="reset" class="btn btn-secondary btn-lg" value="reset"
+                onclick=resetForm()>
+        </div>
+
+    </form>
+
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+        $(function () {
+            $('.datepicker').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+        });
+    </script>
+</body>
+
+</html>
